@@ -22,12 +22,26 @@ namespace PatrolEDR
                 {
                     parentName = Process.GetProcessById(parentId).ProcessName;
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"{ex}");
+
+                }
 
                 Console.WriteLine($"[PROCESS SPAWN] {processName} (PID: {pid}) started by {parentName}");
             };
 
-            watcher.Start();
+            try
+            {
+                watcher.Start();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"{e}");
+
+            }
+
             Console.WriteLine("Press Enter to exit...");
             Console.ReadLine();
         }

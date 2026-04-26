@@ -5,7 +5,8 @@ It monitors process creation in real-time and can detect suspicious processes ba
 
 ## Features
 
-- Real-time monitoring of process creation
-- Detects suspicious processes launched by untrusted parents
-- Logs alerts to console (future: file or server logging)
-- Lightweight and easy to extend for research purposes
+* Real-time monitoring of process creation
+* Detects suspicious processes launched by untrusted parents
+* Logs alerts to console
+* Lightweight and easy to extend for research purposes
+
